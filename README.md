@@ -28,6 +28,17 @@ npx expo run:android   # or: npx expo run:ios
 # or in the cloud: npx eas-cli@latest build --profile development
 ```
 
+## Build an APK
+
+Expo's cloud builds an installable APK for you (free Expo account needed):
+
+```bash
+npx eas-cli@latest login
+npx eas-cli@latest build -p android --profile preview
+```
+
+When it finishes, open the link it prints on your Android phone and install the APK.
+
 ## API keys (optional)
 
 The tracker, plans, shopping list and recipe editor work without any keys. Two features use external APIs; enter the keys in the app's **Settings** tab (stored in the device keychain/keystore), or put them in `.env.local` (see `.env.example`).
