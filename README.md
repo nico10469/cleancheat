@@ -30,7 +30,9 @@ npx expo run:android   # or: npx expo run:ios
 
 ## Build an APK
 
-Expo's cloud builds an installable APK for you (free Expo account needed):
+Every push to `main` (and every pull request) builds an APK with GitHub Actions. Open the repository's **Actions** tab, pick the latest "Android APK" run, and download `cleancheat-apk` under Artifacts. Unzip it and install the `.apk` on your phone (allow installs from unknown sources when asked). You can also start a build by hand with **Run workflow**.
+
+Or let Expo's cloud build it (free Expo account needed):
 
 ```bash
 npx eas-cli@latest login
