@@ -1,17 +1,20 @@
 {
   "expo": {
-    "name": "cleancheat",
+    "name": "CleanCheat",
     "slug": "cleancheat",
+    "scheme": "cleancheat",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cleancheat.app"
     },
     "android": {
+      "package": "com.cleancheat.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#E6F4EA",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -20,6 +23,19 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "CleanCheat uses the camera so you can photograph a meal and identify the recipe.",
+          "photosPermission": "CleanCheat reads photos you pick so it can identify the recipe in them."
+        }
+      ]
+    ]
   }
 }
